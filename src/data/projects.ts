@@ -160,4 +160,52 @@ Project: Wembley E01/E02 (also known as the Madison building) is a massive mixed
     timeline: null,
     order: 2,
   },
+  {
+    slug: 'al-rayyan-stadium',
+    title: 'Al Rayyan Stadium',
+    categorySlug: 'construction',
+    tag: 'Construction, Sports',
+    blurb: 'FIFA World Cup Qatar 2022 stadium and surrounding sports precinct.',
+    description: `Al Rayyan Stadium (also known as Ahmad Bin Ali Stadium) is a 40,000-seat stadium built for the FIFA World Cup Qatar 2022, part of a wider sports precinct including training pitches and indoor arenas.
+
+Role: Project Engineer
+Company: Ramboll`,
+    year: '2013-2015',
+    role: 'Project Engineer',
+    tools: null,
+    timeline: null,
+    order: 3,
+  },
+  {
+    slug: 'mandarin-oriental-tel-aviv',
+    title: 'Mandarin Oriental Tel Aviv',
+    categorySlug: 'construction',
+    tag: 'Construction, Hospitality',
+    blurb: "Luxury beachfront hotel and residences on Tel Aviv's Mediterranean coastline.",
+    description: `Mandarin Oriental, Tel Aviv is a luxury beachfront hotel and residences overlooking the Mediterranean.
+
+Role: Mechanical Engineer
+Company: HRVAC`,
+    year: '2017-2019',
+    role: 'Mechanical Engineer',
+    tools: null,
+    timeline: null,
+    order: 4,
+  },
+  {
+    slug: 'peninsula-london',
+    title: 'Peninsula London',
+    categorySlug: 'construction',
+    tag: 'Construction, Hospitality',
+    blurb: 'Luxury hotel next to Hyde Park Corner and Wellington Arch, London.',
+    description: `The Peninsula London is a luxury hotel located next to Hyde Park Corner and Wellington Arch.
+
+Role: Project Engineer
+Company: Ramboll`,
+    year: '2013-2015',
+    role: 'Project Engineer',
+    tools: null,
+    timeline: null,
+    order: 5,
+  },
 ]

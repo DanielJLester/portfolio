@@ -24,8 +24,8 @@ steps required.
 - `home-design-and-estimation` (Studio) → Studio-plan layout.png
 - `tpp-platform` → Trade Partner Portal Dashboard.png
 - `wembley` → wembley-4.jpg
+- `al-rayyan-stadium` → alrayyanstadiumjpg.jpg
+- `mandarin-oriental-tel-aviv` → Mandarin Oriental hotel.jpg
+- `peninsula-london` → Peninsula hotel.webp
 
 Not yet mapped: `color-forecasting`, `iwac`, `bim-ecosystem`.
-
-`alrayyanstadiumjpg.jpg` is in this folder but unmapped — it depicts Al
-Rayyan Stadium in Qatar, which doesn't match any current project.
