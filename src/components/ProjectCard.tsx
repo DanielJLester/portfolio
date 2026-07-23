@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { getProjectImage } from '../data/projectImages'
 import type { Project } from '../data/types'
 import ProjectImage from './ProjectImage'
 
@@ -9,7 +10,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] transition hover:border-accent/40 hover:bg-white/[0.04]"
     >
       <ProjectImage
-        src={project.image}
+        src={getProjectImage(project.slug)}
         title={project.title}
         className="h-44 w-full object-cover"
       />
