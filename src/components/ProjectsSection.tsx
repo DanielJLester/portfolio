@@ -1,7 +1,27 @@
 import { useMemo, useState } from 'react'
 import { categories } from '../data/categories'
 import { projects } from '../data/projects'
+import { sortByRecency } from '../data/projectSort'
+import type { Project } from '../data/types'
 import ProjectCard from './ProjectCard'
+
+const CONSTRUCTION_SLUG = 'construction'
+
+function groupByBuildingClass(sortedProjects: Project[]): [string, Project[]][] {
+  const groups = new Map<string, Project[]>()
+  for (const project of sortedProjects) {
+    const key = project.buildingClass ?? 'Other'
+    const group = groups.get(key)
+    if (group) {
+      group.push(project)
+    } else {
+      groups.set(key, [project])
+    }
+  }
+  // sortedProjects is already recency-ordered, so the first project seen in
+  // each group is that group's most recent — use that to order the groups.
+  return [...groups.entries()]
+}
 
 export default function ProjectsSection() {
   const [activeSlug, setActiveSlug] = useState<string | null>(null)
@@ -15,8 +35,13 @@ export default function ProjectsSection() {
     const filtered = activeSlug
       ? projects.filter((project) => project.categorySlug === activeSlug)
       : projects
-    return [...filtered].sort((a, b) => a.order - b.order)
+    return sortByRecency(filtered)
   }, [activeSlug])
+
+  const groupedByClass = useMemo(() => {
+    if (activeSlug !== CONSTRUCTION_SLUG) return null
+    return groupByBuildingClass(visibleProjects)
+  }, [activeSlug, visibleProjects])
 
   return (
     <section id="work" className="mx-auto max-w-6xl px-6 py-20">
@@ -64,11 +89,28 @@ export default function ProjectsSection() {
         </p>
       )}
 
-      <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {visibleProjects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
-        ))}
-      </div>
+      {groupedByClass ? (
+        <div className="mt-8 space-y-12">
+          {groupedByClass.map(([buildingClass, classProjects]) => (
+            <div key={buildingClass}>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-400">
+                {buildingClass}
+              </h3>
+              <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {classProjects.map((project) => (
+                  <ProjectCard key={project.slug} project={project} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {visibleProjects.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
+        </div>
+      )}
     </section>
   )
 }
