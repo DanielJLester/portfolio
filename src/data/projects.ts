@@ -1,7 +1,5 @@
 import type { Project } from './types'
 
-// `image` / `galleryImages` are left null until real project photos are added to
-// public/images/projects/. Intended filenames are noted per project below.
 export const projects: Project[] = [
   {
     slug: 'color-forecasting',
@@ -21,8 +19,6 @@ Internal purchasing and supply chain teams use the forecast data directly, and i
 
 My involvement
 I owned this product from problem definition through MVP. I wrote the PRD, defined scope and success criteria, and ran proof-of-concept demos for purchasing leadership. I partnered with data and engineering teams to design the preference-matching and LLM-based color-detection pipeline, and defined the roadmap to integrate the output into the Trade Partner Portal.`,
-    image: null, // intended: /images/projects/color-forecasting.png
-    galleryImages: [],
     year: '2026',
     role: 'Product Manager',
     tools: 'Palantir Foundry, Figma',
@@ -47,8 +43,6 @@ Internally, the platform serves national and division-level trade partner manage
 
 My involvement
 I led product management for the Trade Partner Platform and its Onboarding module. I ran competitive and market research to inform a build-vs-buy recommendation (evaluating construction platforms and supplier-relationship-management tools), led discovery sessions with division and corporate stakeholders to surface requirements and pain points, and defined the phased roadmap — starting with the onboarding and compliance MVP, with bidding, forecast sharing, and performance management to follow. I also directed wireframing of the onboarding experience.`,
-    image: null, // intended: /images/projects/tpp-platform.png
-    galleryImages: [],
     year: '2026',
     role: 'Product Manager',
     tools: 'React, Kafka',
@@ -74,8 +68,6 @@ Studio was used internally across design, architecture, and purchasing operation
 
 My involvement
 I was the Product Manager for Studio. I led evaluation and rollout of the platform with the Veev team, ran hands-on training and demo sessions with internal stakeholders, and gathered structured field feedback (e.g., stair head-clearance validation, support for angled walls, wall-finish parameters by room type) that fed directly into the product roadmap. I worked closely with engineering to prioritize features including the element catalog, elevation split lines, dynamic stair generation, and add/remove wall tools.`,
-    image: null, // intended: /images/projects/studio.png
-    galleryImages: [],
     year: '2024-2025',
     role: 'Product Manager',
     tools: 'Figma, Jira, ChatGPT',
@@ -102,8 +94,6 @@ Early beta release phase, looking for beta testers.
 
 Sign up for the app: https://audiostickynotes.netlify.app/dashboard
 Further details on the GitHub overview: https://github.com/DanielJLester/RiffBoard`,
-    image: null, // intended: /images/projects/stickynotes.png
-    galleryImages: [],
     year: '2026',
     role: 'Full-stack (PM, Dev, UX/UI)',
     tools: 'React Native, Supabase, Expo',
@@ -119,8 +109,6 @@ Further details on the GitHub overview: https://github.com/DanielJLester/RiffBoa
     description: `Research and development to production.
 
 Wrote the PRD for mechanical engineers and industrial designers to develop from.`,
-    image: null,
-    galleryImages: [],
     year: null,
     role: null,
     tools: null,
@@ -134,8 +122,6 @@ Wrote the PRD for mechanical engineers and industrial designers to develop from.
     tag: 'BIM',
     blurb: null,
     description: null,
-    image: null,
-    galleryImages: [],
     year: null,
     role: null,
     tools: null,
@@ -150,8 +136,6 @@ Wrote the PRD for mechanical engineers and industrial designers to develop from.
     blurb: 'Luxury residential apartment scheme in London, UK.',
     description: `£3 billion Chelsea Barracks masterplan in Belgravia, London.
 https://www.chelseabarracks.com/`,
-    image: null, // intended: /images/projects/chelsea-barracks.jpeg
-    galleryImages: [],
     year: '2017',
     role: 'Lead MEP Engineer',
     tools: 'Revit',
@@ -170,8 +154,6 @@ Company: HPF
 Client: Quintain
 
 Project: Wembley E01/E02 (also known as the Madison building) is a massive mixed-use residential development at Wembley Park. Comprising four 15-story buildings, it houses 633 apartments, retail spaces, a fitness club, and a nursery next to Wembley Stadium.`,
-    image: null, // intended: /images/projects/wembley.jpg
-    galleryImages: [],
     year: '2016-2017',
     role: 'Project MEP Team Lead',
     tools: 'Workday, Bluebeam, Revit, Excel',

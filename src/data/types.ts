@@ -13,8 +13,6 @@ export interface Project {
   tag: string
   blurb: string | null
   description: string | null
-  image: string | null
-  galleryImages: string[]
   year: string | null
   role: string | null
   tools: string | null

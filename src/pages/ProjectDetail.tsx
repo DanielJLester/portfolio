@@ -2,6 +2,7 @@ import { ArrowLeft } from 'lucide-react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import ProjectImage from '../components/ProjectImage'
 import { categories } from '../data/categories'
+import { getProjectGallery, getProjectImage } from '../data/projectImages'
 import { projects } from '../data/projects'
 
 export default function ProjectDetail() {
@@ -13,6 +14,7 @@ export default function ProjectDetail() {
   }
 
   const category = categories.find((item) => item.slug === project.categorySlug)
+  const gallery = getProjectGallery(project.slug)
   const meta = [
     { label: 'Role', value: project.role },
     { label: 'Year', value: project.year },
@@ -39,7 +41,7 @@ export default function ProjectDetail() {
       </div>
 
       <ProjectImage
-        src={project.image}
+        src={getProjectImage(project.slug)}
         title={project.title}
         className="mt-10 h-72 w-full rounded-2xl object-cover sm:h-96"
       />
@@ -65,9 +67,9 @@ export default function ProjectDetail() {
         </p>
       )}
 
-      {project.galleryImages.length > 0 && (
+      {gallery.length > 0 && (
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {project.galleryImages.map((image) => (
+          {gallery.map((image) => (
             <img
               key={image}
               src={image}
