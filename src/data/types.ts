@@ -17,7 +17,8 @@ export interface Project {
   role: string | null
   tools: string | null
   timeline: string | null
-  order: number
+  /** Building type for construction projects (e.g. Residential, Hospitality). */
+  buildingClass: string | null
 }
 
 export interface Role {
