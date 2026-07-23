@@ -1,7 +1,6 @@
 import type { Role } from './types'
 
 export const roles: Role[] = [
-  { name: 'Senior Product Manager', period: '2026—Present', org: 'Fielding Robotics', order: 0 },
   { name: 'Product Manager', period: '2024—2026', org: 'Lennar - Digital Ops', order: 1 },
   { name: 'R&D Platform Senior Manager', period: '2020—2023', org: 'Veev', order: 2 },
   { name: 'Head of BIM', period: '2019-2020', org: 'Veev', order: 3 },
